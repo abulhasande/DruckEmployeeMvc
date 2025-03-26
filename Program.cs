@@ -1,4 +1,6 @@
 using DruckEmployeeMvc.Data;
+using DruckEmployeeMvc.Repositories;
+using DruckEmployeeMvc.Repositories.Contracts;
 using Microsoft.EntityFrameworkCore;
 
 namespace DruckEmployeeMvc
@@ -15,6 +17,8 @@ namespace DruckEmployeeMvc
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DruckConnection"));
             });
+
+            builder.Services.AddScoped<IEmployeeRepository,EmployeeRepository>();
 
             var app = builder.Build();
 

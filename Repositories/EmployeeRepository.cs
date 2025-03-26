@@ -139,10 +139,10 @@ namespace DruckEmployeeMvc.Repositories
         {
             var employeeDto = new EmployeeDto();
             employeeDto.Id = employee.Id;
-            employeeDto.Name = employeeDto.Name;
-            employeeDto.Email = employeeDto.Email;
-            employeeDto.Department = employeeDto.Department;
-            employeeDto.Position = employeeDto.Position;
+            employeeDto.Name = employee.Name;
+            employeeDto.Email = employee.Email;
+            employeeDto.Department = employee.Department;
+            employeeDto.Position = employee.Position;
 
             return employeeDto;
         }
