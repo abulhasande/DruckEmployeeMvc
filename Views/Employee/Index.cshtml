@@ -3,7 +3,7 @@
 @{
 }
 
-
+<partial name="_Notification" />
 
 <h2 class="text-center mb-5"> List of Employees</h2>
 <div class="row mb-5">
@@ -41,7 +41,7 @@
                 <td style="white-space:nowrap; margin-top: 5px;">
                     <a class="btn btn-primary btn-sm" asp-controller="Employee" asp-action="Edit" asp-route-id="@emp.Id"> Edit</a>
                     <a class="btn btn-danger btn-sm" asp-controller="Employee" asp-action="Delete" asp-route-id="@emp.Id" 
-                       onclick="return confirm('Are you sure want to delete employee : @emp.Name')">Delete</a>
+                       onclick="return confirm('Are you sure want to delete employee @emp.Name ')">Delete</a>
                 </td>
             </tr>
         }

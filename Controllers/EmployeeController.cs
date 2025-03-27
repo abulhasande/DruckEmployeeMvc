@@ -33,6 +33,8 @@ namespace DruckEmployeeMvc.Controllers
 
             await _empRepo.CreateEmployee(employeeDto);
 
+            TempData["snackbar"] = "Employee saved successfully";
+
             return RedirectToAction("Index", "Employee");
         }
 
@@ -70,6 +72,8 @@ namespace DruckEmployeeMvc.Controllers
 
             await _empRepo.UpdateEmployee(id, employeeDto);
 
+            TempData["snackbar"] = "Employee updated successfully";
+
             return RedirectToAction("Index", "Employee");
 
         }
@@ -83,6 +87,8 @@ namespace DruckEmployeeMvc.Controllers
             }
 
             await _empRepo.DeleteEmployee(id);
+
+            TempData["snackbar"] = "Employee deleted successfully";
 
             return RedirectToAction("Index", "Employee");
 
