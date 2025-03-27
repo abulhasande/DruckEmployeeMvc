@@ -5,10 +5,14 @@ namespace DruckEmployeeMvc.Repositories.Contracts
 {
     public interface IEmployeeRepository
     {
-        Task<EmployeeDto> CreateEmployee(EmployeeDto employee);
-        Task<bool> UpdateEmployee(EmployeeDto employee);
-        Task<bool> DeleteEmployee(int id);
-        Task<EmployeeDto> GetEmployeeById(int id);
-        Task<List<EmployeeDto>> GetEmployees();
+        Task CreateEmployee(EmployeeDto employee);
+        Task UpdateEmployee(int id, EmployeeDto employeeDto);
+        Task DeleteEmployee(int id);
+        Task<Employee> GetEmployeeById(int id);
+        Task<List<Employee>> GetEmployees();
+
+        Employee ConvertEmployeeDtoToEmployee(EmployeeDto employeeDto);
+        EmployeeDto ConvertEmployeeToEmployeeDto(Employee employee);
+
     }
 }

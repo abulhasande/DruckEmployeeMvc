@@ -3,10 +3,8 @@
 namespace DruckEmployeeMvc.ViewModel
 {
     public class EmployeeDto
-    {
-        
-        public int Id { get; set; }
-
+    {        
+    
         [Required]
         public string? Name { get; set; }
 
@@ -14,7 +12,9 @@ namespace DruckEmployeeMvc.ViewModel
         public string? Position { get; set; }
 
         [Required]
-        public string? Department { get; set; }     
+        public string? Department { get; set; }   
+
+        [Required]
         public string? Email { get; set; }
  
     }

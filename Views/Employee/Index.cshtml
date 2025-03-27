@@ -1,5 +1,5 @@
-﻿@using DruckEmployeeMvc.ViewModel
-@model List<EmployeeDto>
+﻿
+@model List<Employee>
 @{
 }
 
@@ -39,8 +39,9 @@
                 <td>@emp.Email</td>
      
                 <td style="white-space:nowrap; margin-top: 5px;">
-                    <a class="btn btn-primary btn-sm" asp-controller="Employee" asp-action="Edit" asp-route-id="@emp.Id">Edit</a>
-                    <a class="btn btn-danger btn-sm" asp-controller="Employee" asp-action="Edit" asp-route-id="@emp.Id">Delete</a>
+                    <a class="btn btn-primary btn-sm" asp-controller="Employee" asp-action="Edit" asp-route-id="@emp.Id"> Edit</a>
+                    <a class="btn btn-danger btn-sm" asp-controller="Employee" asp-action="Delete" asp-route-id="@emp.Id" 
+                       onclick="return confirm('Are you sure want to delete employee : @emp.Name')">Delete</a>
                 </td>
             </tr>
         }
