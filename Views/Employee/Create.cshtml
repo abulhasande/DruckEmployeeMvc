@@ -40,11 +40,14 @@
                 <label class="col-sm-4 col-form-label">Department</label>
                 <div class="col-sm-8">
                     <select class="form-select" asp-for="Department">
+                        <option value=""></option>
                         <option value="HR">HR</option>
+                        <option value="Finance">Finance</option>
                         <option value="Marketing and Sales">Marketing and Sales</option>
                         <option value="Research and Development">Research and Development</option>
                         <option value="IT Administration">IT Administration</option>
                     </select>
+                    <span asp-validation-for="Department" class="text-danger"></span>
                 </div>
             </div>
 

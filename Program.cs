@@ -20,6 +20,8 @@ namespace DruckEmployeeMvc
 
             builder.Services.AddScoped<IEmployeeRepository,EmployeeRepository>();
 
+            builder.Services.AddControllersWithViews()
+                            .AddViewOptions(options => options.HtmlHelperOptions.ClientValidationEnabled = true);
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
